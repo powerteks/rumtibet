@@ -1,0 +1,42 @@
+html {
+	font-family     : $font-family;
+	font-size       : $font-size-main;
+	line-height     : $line-height;
+
+	@media (min-width: $min-desktop) {
+		font-size: $font-size-desktop;
+	}
+}
+
+body {
+	@include reset-indent;
+
+	color           : $color-text;
+	background-color: $color-body;
+}
+
+*:focus {
+	z-index   : z('focus');
+	outline   : none;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 5px 3px #3f89bf;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	overflow: hidden;
+	clip    : rect(1px 1px 1px 1px);
+	clip    : rect(1px, 1px, 1px, 1px);
+	width   : 1px !important;
+	height  : 1px !important;
+	padding : 0 !important;
+	border  : 0 !important;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+.container {
+	margin : 0;
+	padding: 0 $indent;
+}
